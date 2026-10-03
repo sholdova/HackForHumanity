@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hack for Humanity connects people, ideas, and action for meaningful local impact." />
+    <title>Hack for Humanity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Hack for Humanity home">H<span>4</span>H</a>
+        <a class="nav-link" href="#join">Join the movement <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section class="hero" id="top">
+        <p class="eyebrow">PEOPLE + IDEAS + ACTION</p>
+        <h1>Build a kinder<br /><em>tomorrow.</em></h1>
+        <p class="intro">Hack for Humanity brings curious builders together to turn the challenges around us into practical, people-first change.</p>
+        <a class="button" href="#join">Be part of it <span aria-hidden="true">↓</span></a>
+        <div class="orb orb-one" aria-hidden="true"></div>
+        <div class="orb orb-two" aria-hidden="true"></div>
+      </section>
+
+      <section class="values" aria-label="Our approach">
+        <article><span>01</span><h2>Listen deeply</h2><p>Start with the people closest to a problem, not assumptions.</p></article>
+        <article><span>02</span><h2>Make together</h2><p>Bring different perspectives into the same room and create in the open.</p></article>
+        <article><span>03</span><h2>Leave it better</h2><p>Turn small experiments into lasting impact for our communities.</p></article>
+      </section>
+
+      <section class="join" id="join">
+        <div><p class="eyebrow">THE NEXT CHAPTER STARTS HERE</p><h2>Good ideas need<br />good people.</h2></div>
+        <form id="interest-form">
+          <label for="email">Get updates about our next build</label>
+          <div class="field"><input id="email" name="email" type="email" placeholder="you@example.com" required /><button type="submit" aria-label="Submit email">→</button></div>
+          <p class="form-note" id="form-note" aria-live="polite">No spam. Just invitations to make a difference.</p>
+        </form>
+      </section>
+    </main>
+    <footer><span>© 2026 HACK FOR HUMANITY</span><span>MADE WITH CARE, FOR EVERYONE.</span></footer>
+    <script>
+      document.getElementById('interest-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        document.getElementById('form-note').textContent = 'You’re on the list — we’ll be in touch soon.';
+        event.currentTarget.reset();
+      });
+    </script>
+  </body>
+</html>
