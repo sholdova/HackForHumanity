@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hack For Humanity — Idea Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="workspace-shell">
+      <header class="topbar">
+        <a class="brand" href="#map" aria-label="Hack For Humanity workspace home"><span class="brand-mark">H</span><span>Hack For Humanity</span></a>
+        <nav aria-label="Workspace navigation"><a href="#map" class="active">Map</a><a href="#rooms">Rooms</a><a href="#people">People</a></nav>
+        <button class="profile" type="button" aria-label="Open profile menu">JD</button>
+      </header>
+
+      <section class="workspace" aria-label="Hack For Humanity workspace map">
+        <aside class="sidebar" id="rooms">
+          <div class="workspace-label"><span class="status-dot"></span>HACKATHON HQ</div>
+          <h1>Build together,<br />make it matter.</h1>
+          <p class="intro">A shared home for teams turning good ideas into real impact.</p>
+          <div class="room-list-heading"><span>ROOMS</span><button id="add-room" type="button" aria-label="Add a room">+</button></div>
+          <ul class="room-list">
+            <li><button class="room-link" type="button"><span class="room-icon">⌂</span>Welcome</button></li>
+            <li><button class="room-link current" type="button" aria-current="page"><span class="room-icon">✦</span><span>Idea Board</span><span class="unread">6</span></button></li>
+            <li><button class="room-link" type="button"><span class="room-icon">⌘</span>Build Lab</button></li>
+            <li><button class="room-link" type="button"><span class="room-icon">◒</span>Demo Stage</button></li>
+          </ul>
+          <div class="sidebar-footer"><span class="avatars" aria-hidden="true"><i>MK</i><i>AP</i><i>SL</i></span><span>12 builders online</span></div>
+        </aside>
+
+        <section class="map-panel" id="map">
+          <div class="map-toolbar"><div><p class="eyebrow">WORKSPACE MAP</p><h2>Choose a room to begin</h2></div><button class="invite" type="button">Invite teammates <span>↗</span></button></div>
+          <div class="map" aria-label="An illustrated map of Hack For Humanity rooms">
+            <svg class="paths" viewBox="0 0 1000 620" aria-hidden="true"><path d="M170 395 C270 395 272 290 380 290 S510 212 580 210 S690 146 742 186"/><path d="M380 290 C482 300 474 455 578 466 S690 466 725 420"/><path d="M580 210 C650 250 627 346 725 420"/><path d="M170 395 C270 402 310 473 420 485"/></svg>
+            <div class="map-note note-one">MAKE IT<br />HAPPEN <span>→</span></div><div class="map-note note-two">GOOD IDEAS<br />TRAVEL FAST</div>
+            <article class="map-room welcome"><span class="room-pin">⌂</span><div><h3>Welcome</h3><p>Start here</p></div></article>
+            <article class="map-room idea selected"><span class="room-pin">✦</span><div><span class="map-tag">NEW ROOM</span><h3>Idea Board</h3><p>Sketch. Share. Shape.</p><span class="member-count">● 6 inside now</span></div><button type="button" class="enter-room">Enter <span>→</span></button></article>
+            <article class="map-room build"><span class="room-pin">⌘</span><div><h3>Build Lab</h3><p>Turn plans into prototypes</p></div></article>
+            <article class="map-room demo"><span class="room-pin">◒</span><div><h3>Demo Stage</h3><p>Show what you've made</p></div></article>
+            <div class="plant plant-one">✳</div><div class="plant plant-two">✳</div><div class="plant plant-three">✳</div>
+            <div class="map-legend"><span><i class="legend-path"></i>Path</span><span><i class="legend-room"></i>Room</span></div>
+          </div>
+        </section>
+      </section>
+      <div class="toast" id="toast" role="status" aria-live="polite">Idea Board is ready for your team.</div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
